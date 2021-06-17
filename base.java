@@ -1,5 +1,11 @@
 import com.sun.org.apache.bcel.internal.generic.SWITCH;
-
+/**
+ * Начинаем писать калькулятор 13.06.2021
+ *@author Волкова Александра
+ * @param sl1 первое вводимое число
+ * @param sl2  второе вводимое число
+ * @return res результат операции над введенными числами
+ */
 import java.util.Scanner;
 
 public class base {
