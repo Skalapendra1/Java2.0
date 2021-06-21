@@ -1,3 +1,18 @@
+/**
+ * @author Волкова Александра
+ * @see #calculator() Выбор действия и выпонения действия над двумя введенными с клавиатуры числами.
+ *  @param sl1 первое вводимое число
+ *  @param sl2  второе вводимое число
+ *  @param zn вводим знак
+ *  @return res результат операции над введенными числами
+ * @see #stroka() ввод чисел с клавиатуры и нахождение самого длинного. выводит кол-во символов самого длинного числа
+ * @param d вводимое чило, обозначающее размерность массива String
+ *  @param array[] массив слов
+ *  @param slovo переменная в которую сохраняется каждый элемент массива array
+ *  @param a длинна массива каждого слова
+ *  @return b число символов в самом длинном слове из массива array
+ */
+
 import java.util.Scanner;
 
 public class qqq {
@@ -27,23 +42,20 @@ public class qqq {
             switch (zn) {
                 case "/":
                     res = sl1 / sl2;
-                    System.out.printf("Результат = %.4f", res);
                     break;
                 case "*":
                     res = sl1 * sl2;
-                    System.out.printf("Результат = %.4f", res);
                     break;
                 case "-":
                     res = sl1 - sl2;
-                    System.out.printf("Результат = %.4f", res);
                     break;
                 case "+":
                     res = sl1 + sl2;
-                    System.out.printf("Результат = %.4f", res);
                     break;
                 default:
                     System.out.println("Не балуйся!\nВводи нормально!");
             }
+            System.out.printf("Результат = %.4f", res);
             scanner.close();
             scanner3.close();
             return res;
@@ -55,6 +67,7 @@ public class qqq {
             int d = scanner1.nextInt();
             String[] array = new String[d];
             int b = 0;
+            String slovo1 = null;
             System.out.println("Введи слова: ");
             for (int i = 0; i < array.length; i++) {
                 Scanner scanner2 = new Scanner(System.in);
@@ -63,12 +76,13 @@ public class qqq {
                 int a = slovo.length();
                 if (a >= b) {
                     b = a;
+                    slovo1=slovo;
                 }
-                scanner2.close();
             }
-            System.out.println("В самом длинном слове "+b+" символов");
+            System.out.println("В самом длинном слове "+slovo1+ " " +b+" символов");
             scanner1.close();
             return b;
         }
     }
 
+`
